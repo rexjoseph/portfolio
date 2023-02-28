@@ -33,7 +33,7 @@ const FullContainer = styled.div`
     padding: 0 30px;
   }
 
-  @media (min-widt: 1024px) {
+  @media (min-width: 1024px) {
     padding: 0 33px;
   }
 
@@ -473,6 +473,20 @@ const SocialLinkH2Link = styled.a`
   color: #fff;
 `
 
+const BigHeadingDiv = styled.div`
+  margin: 0 auto;
+`
+
+const BigHeading = styled.h1`
+  font-size: 30vw;
+  font-weight: 400;
+  letter-spacing: -10px;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+`
+
+
 const Home = () => {
   const copy = new Date().getFullYear();
 
@@ -509,15 +523,20 @@ const Home = () => {
             Hey! I am Rex, a Software Engineer with 2.5 years of experience creating experiences for startups, brands, charities, and agencies related to climate, fintech, eCommerce, and SaaS. I help businesses reach their goals by creating clean but catchy solutions that have a personality and deliver the best outcomes.
           </HeadingTwo>
         </FullContainer1>
+        <FullContainerDefault>
+          <BigHeadingDiv>
+            <BigHeading>WORK</BigHeading>
+          </BigHeadingDiv>
+        </FullContainerDefault>
         <FullContainerDefault id="projects">
           <SectionGrid>
             <BlogRow1>
               <Hr></Hr>
               <BlogList>
-                <BloglistLink>
+                <BloglistLink href="/work/bop">
                   <BlogListP>
                     <BlogListSpan>bop.</BlogListSpan>
-                    <BlogListSpan>Apparel eCommerce & showroom</BlogListSpan>
+                    <BlogListSpan>Apparel eCommerce</BlogListSpan>
                     <BlogListSpan>bop.</BlogListSpan>
                   </BlogListP>
                   <BlogListImageDiv>
@@ -525,7 +544,7 @@ const Home = () => {
                   </BlogListImageDiv>
                   <BlogListP1>
                     <BlogListSpan>bop.</BlogListSpan>
-                    <BlogListSpan>Apparel eCommerce & showroom</BlogListSpan>
+                    <BlogListSpan>Apparel eCommerce</BlogListSpan>
                     <BlogListSpan>bop.</BlogListSpan>
                   </BlogListP1>
                 </BloglistLink>
@@ -545,7 +564,7 @@ const Home = () => {
                     <SocialLink href="mailto:devloperrex@gmail.com" target="_blank">Email</SocialLink>
                   </>
                   <>
-                    <SocialLink>Dribbble</SocialLink>
+                    <SocialLink href="https://github.com/rexjoseph" target="_blank">GitHub</SocialLink>
                   </>
                 </SocialLinkRow>
                 <>
