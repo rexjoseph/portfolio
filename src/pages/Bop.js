@@ -203,12 +203,6 @@ const CaseHeroParagraph = styled.p`
    {
     width: 33.3333333333vw;
   }
-
-  // @media screen and (min-width: 501px)
-  // {
-  //   margin-bottom: 2.3rem;
-  //   width: 64.6153846154vw;
-  // }
 `
 
 const CaseHeroUrl = styled.div`
