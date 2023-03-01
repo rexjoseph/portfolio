@@ -1,0 +1,32 @@
+span {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -.7px;
+  /* overflow: hidden; */
+  display: inline-block;
+}
+
+@media (min-width: 1280px) {
+  span {
+    font-size: calc(9px + 3.65vw);
+    line-height: 1.1;
+    /* margin-bottom: 120px; */
+  }
+}
+
+@media (min-width: 1024px) {
+  span {
+    font-size: calc(9px + 3.65vw);
+    line-height: 1.1;
+    /* margin-bottom: 108px; */
+  }
+}
+
+@media (min-width: 768px) {
+  span {
+    font-size: 55px;
+    line-height: 1.1;
+    /* margin-bottom: 96px; */
+  }
+}

@@ -1,7 +1,13 @@
-import React, { useEffect } from 'react'
-import styled from 'styled-components'
-import Bop from "../images/bop-min-scaled-1.jpg"
-import { Link } from 'react-router-dom'
+import React, { useEffect } from "react";
+import styled from "styled-components";
+import Bop from "../images/bop-min-scaled-1.jpg";
+import { Link } from "react-router-dom";
+import TextSpan from "../TextSpan";
+
+const sentence =
+  "Hey! I am Rex, a Software Engineer with 2.5 years of experience creating experiences for startups, brands, charities, and agencies related to climate, fintech, eCommerce, and SaaS. I help businesses reach their goals by creating clean but catchy solutions that have a personality and deliver the best outcomes.".split(
+    ""
+  );
 
 const SiteHeader = styled.header`
   padding: 12px 0;
@@ -19,7 +25,7 @@ const SiteHeader = styled.header`
   @media (min-width: 768px) {
     padding: 16px 0;
   }
-`
+`;
 
 const FullContainer = styled.div`
   max-width: 100%;
@@ -41,7 +47,7 @@ const FullContainer = styled.div`
   @media (min-width: 768px) {
     padding: 0 24px;
   }
-`
+`;
 
 const FullContainer1 = styled.div`
   max-width: 100%;
@@ -72,7 +78,7 @@ const FullContainer1 = styled.div`
     padding-bottom: 0px;
     padding-top: 124px;
   }
-`
+`;
 
 const LinkLogo = styled.a`
   opacity: 1;
@@ -88,7 +94,7 @@ const LinkLogo = styled.a`
   @media (min-width: 1024px) {
     font-size: 16px;
   }
-`
+`;
 
 const SiteHeaderMenu = styled.div`
   flex: 1 1 auto;
@@ -109,9 +115,9 @@ const SiteHeaderMenu = styled.div`
     margin-right: -40px;
     margin-left: -137px;
   }
-`
+`;
 
-const MenuContainer = styled.div``
+const MenuContainer = styled.div``;
 
 const MenuList = styled.ul`
   padding: 0;
@@ -119,13 +125,13 @@ const MenuList = styled.ul`
   list-style: none;
   display: flex;
   justify-content: center;
-`
+`;
 
 const MenuLi = styled.li`
   opacity: 1;
   visibility: inherit;
   padding: 2px;
-`
+`;
 
 const LinkA = styled.a`
   font-size: 15px;
@@ -144,32 +150,35 @@ const LinkA = styled.a`
   @media (min-width: 1024px) {
     font-size: 16px;
   }
-`
+`;
 
 const SiteHeaderIcon = styled.div`
   opacity: 1;
   visibility: inherit;
   position: relative;
   overflow: hidden;
-`
+`;
 
 const Main = styled.main`
   background: #f5f5f4;
   display: block;
-`
+`;
 
-const HeadingTwo = styled.h2`
+const HeadingTwoDiv = styled.div`
+  margin-bottom: 64px;
+`;
+
+const HeadingTwo = styled.span`
   font-size: 28px;
   line-height: 32px;
   font-weight: 400;
   letter-spacing: -1.119px;
   overflow: hidden;
-  margin-bottom: 64px;
 
-  @media (max-width: 1439px) {
-    padding-right: 14px;
-  }
-  
+  // @media (max-width: 1439px) {
+  //   padding-right: 14px;
+  // }
+
   @media (min-width: 1280px) {
     font-size: calc(9px + 3.65vw);
     line-height: 1.1;
@@ -187,7 +196,7 @@ const HeadingTwo = styled.h2`
     line-height: 1.1;
     margin-bottom: 96px;
   }
-`
+`;
 
 const FullContainerDefault = styled.div`
   max-width: 100%;
@@ -206,10 +215,9 @@ const FullContainerDefault = styled.div`
   @media (min-width: 768px) {
     padding: 0 24px;
   }
-`
+`;
 
-const SectionGrid = styled.section`
-`
+const SectionGrid = styled.section``;
 
 const BlogList = styled.div`
   flex: 1 1 auto;
@@ -232,7 +240,7 @@ const BlogList = styled.div`
     &:last-of-type {
     width: 30%;
   }
-`
+`;
 
 const BlogRow1 = styled.div`
   display: flex;
@@ -278,7 +286,7 @@ const BlogRow1 = styled.div`
     &:nth-child(3n+3) ${BlogList}:last-of-type {
       width: calc(70% - 26px);
   }
-`
+`;
 
 const Hr = styled.hr`
   display: block;
@@ -294,7 +302,7 @@ const Hr = styled.hr`
   color: #171717;
   overflow: visible;
   transform: scaleX(1);
-`
+`;
 
 const BloglistLink = styled.div`
   display: block;
@@ -312,7 +320,7 @@ const BloglistLink = styled.div`
   @media (min-width: 768px) {
     margin-bottom: 96px;
   }
-`
+`;
 
 const BlogListP = styled.p`
   display: flex;
@@ -333,7 +341,7 @@ const BlogListP = styled.p`
     font-size: 15px;
     line-height: 20px;
   }
-`
+`;
 
 const BlogListP1 = styled.p`
   display: flex;
@@ -358,16 +366,16 @@ const BlogListP1 = styled.p`
   @media (max-width: 768px) {
     display: none;
   }
-`
+`;
 
-const BlogListSpan = styled.span``
+const BlogListSpan = styled.p``;
 
 const BlogListImageDiv = styled.div`
   padding-top: 75%;
   position: relative;
   overflow: hidden;
   isolation: isolate;
-`
+`;
 
 const BlogListImage = styled.img`
   display: block;
@@ -386,9 +394,9 @@ const BlogListImage = styled.img`
     transition: scale 1s ease;
     scale: 1.03 !important;
   }
-`
+`;
 
-const ContactDiv = styled.div``
+const ContactDiv = styled.div``;
 
 const ContactBG = styled.section`
   background-color: #171717;
@@ -397,14 +405,14 @@ const ContactBG = styled.section`
   overflow: hidden;
   z-index: 111;
   position: relative;
-`
+`;
 
 const ContactFlex = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   min-height: 100vh;
-`
+`;
 
 const SocialLinkRow = styled.div`
   display: flex;
@@ -422,7 +430,7 @@ const SocialLinkRow = styled.div`
   @media (min-width: 768px) {
     padding-top: 24px;
   }
-`
+`;
 
 const SocialLink = styled.a`
   font-size: 16px;
@@ -430,7 +438,7 @@ const SocialLink = styled.a`
   padding: 5px;
   color: #fff;
   cursor: pointer;
-`
+`;
 
 const SocialLink1 = styled.a`
   font-size: 16px;
@@ -438,7 +446,7 @@ const SocialLink1 = styled.a`
   padding: 5px;
   color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
-`
+`;
 
 const SocialLinkBookCall = styled.a`
   font-size: 18px;
@@ -452,7 +460,7 @@ const SocialLinkBookCall = styled.a`
   &:hover {
     text-decoration: none;
   }
-`
+`;
 
 const SocialLinkH2 = styled.h2`
   letter-spacing: -2px;
@@ -468,15 +476,15 @@ const SocialLinkH2 = styled.h2`
     font-size: 100px;
     line-height: 100px;
   }
-`
+`;
 
 const SocialLinkH2Link = styled.a`
   color: #fff;
-`
+`;
 
 const BigHeadingDiv = styled.div`
   margin: 0 auto;
-`
+`;
 
 const BigHeading = styled.h1`
   font-size: 30vw;
@@ -485,8 +493,7 @@ const BigHeading = styled.h1`
   line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
-`
-
+`;
 
 const Home = () => {
   const copy = new Date().getFullYear();
@@ -499,7 +506,7 @@ const Home = () => {
     <>
       <SiteHeader>
         <FullContainer>
-          <LinkLogo href='/portfolio'>Rex Odemheina</LinkLogo>
+          <LinkLogo href="/portfolio">Rex Odemheina</LinkLogo>
           <SiteHeaderMenu>
             <MenuContainer>
               <MenuList>
@@ -520,9 +527,13 @@ const Home = () => {
       </SiteHeader>
       <Main>
         <FullContainer1 id="about">
-          <HeadingTwo>
-            Hey! I am Rex, a Software Engineer with 2.5 years of experience creating experiences for startups, brands, charities, and agencies related to climate, fintech, eCommerce, and SaaS. I help businesses reach their goals by creating clean but catchy solutions that have a personality and deliver the best outcomes.
-          </HeadingTwo>
+          <HeadingTwoDiv>
+            {sentence.map((letter, index) => (
+              <TextSpan key={index}>
+                {letter === " " ? "\u00A0" : letter}
+              </TextSpan>
+            ))}
+          </HeadingTwoDiv>
         </FullContainer1>
         <FullContainerDefault>
           <BigHeadingDiv>
@@ -557,34 +568,73 @@ const Home = () => {
         </FullContainerDefault>
         <ContactDiv id="contact">
           <ContactBG>
-            <FullContainerDefault style={{translate: "none", rotate: "none", scale: "none", transform: `translate(0%, -2%) translate3d(0px, 0px, 0px)`}}>
+            <FullContainerDefault
+              style={{
+                translate: "none",
+                rotate: "none",
+                scale: "none",
+                transform: `translate(0%, -2%) translate3d(0px, 0px, 0px)`,
+              }}
+            >
               <ContactFlex>
                 <SocialLinkRow>
                   <>
-                    <SocialLink href="https://www.linkedin.com/in/rex-odemheina-012413163/" target="_blank">LinkedIn</SocialLink>
+                    <SocialLink
+                      href="https://www.linkedin.com/in/rex-odemheina-012413163/"
+                      target="_blank"
+                    >
+                      LinkedIn
+                    </SocialLink>
                   </>
                   <>
-                    <SocialLink href="mailto:devloperrex@gmail.com" target="_blank">Email</SocialLink>
+                    <SocialLink
+                      href="mailto:devloperrex@gmail.com"
+                      target="_blank"
+                    >
+                      Email
+                    </SocialLink>
                   </>
                   <>
-                    <SocialLink href="https://github.com/rexjoseph" target="_blank">GitHub</SocialLink>
+                    <SocialLink
+                      href="https://github.com/rexjoseph"
+                      target="_blank"
+                    >
+                      GitHub
+                    </SocialLink>
                   </>
                 </SocialLinkRow>
                 <>
                   <SocialLinkH2>
-                    <SocialLinkH2Link>Let's talk about your project</SocialLinkH2Link>
+                    <SocialLinkH2Link>
+                      Let's talk about your project
+                    </SocialLinkH2Link>
                   </SocialLinkH2>
-                  <SocialLinkBookCall href="https://calendly.com/devloperrex/project-discovery" target="_blank">Book a call</SocialLinkBookCall>
+                  <SocialLinkBookCall
+                    href="https://calendly.com/devloperrex/project-discovery"
+                    target="_blank"
+                  >
+                    Book a call
+                  </SocialLinkBookCall>
                 </>
                 <SocialLinkRow>
                   <>
-                    <SocialLink href="https://twitter.com/jvorex_" target="_blank">Twitter</SocialLink>
+                    <SocialLink
+                      href="https://twitter.com/jvorex_"
+                      target="_blank"
+                    >
+                      Twitter
+                    </SocialLink>
                   </>
                   <>
                     <SocialLink1>&copy; {copy}</SocialLink1>
                   </>
                   <>
-                    <SocialLink href="https://instagram.com/jvorex_" target="_blank">Instagram</SocialLink>
+                    <SocialLink
+                      href="https://instagram.com/jvorex_"
+                      target="_blank"
+                    >
+                      Instagram
+                    </SocialLink>
                   </>
                 </SocialLinkRow>
               </ContactFlex>
@@ -593,7 +643,7 @@ const Home = () => {
         </ContactDiv>
       </Main>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
