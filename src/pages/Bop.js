@@ -1,46 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import styled from 'styled-components';
-
-const SiteHeader = styled.header`
-  padding: 12px 0;
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  transition: ease 0.4s;
-  z-index: 99;
-
-  @media (min-width: 1024px) {
-    padding: 20px 0;
-  }
-
-  @media (min-width: 768px) {
-    padding: 16px 0;
-  }
-`
-
-const FullContainer = styled.div`
-  max-width: 100%;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 13px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @media (min-width: 1280px) {
-    padding: 0 30px;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 0 33px;
-  }
-
-  @media (min-width: 768px) {
-    padding: 0 24px;
-  }
-`
+import Navbar from "../components/Navbar";
 
 const FullContainerDefault = styled.div`
   max-width: 100%;
@@ -59,85 +20,6 @@ const FullContainerDefault = styled.div`
   @media (min-width: 768px) {
     padding: 0 24px;
   }
-`
-
-const LinkLogo = styled.a`
-  opacity: 1;
-  visibility: inherit;
-  color: #171717;
-  text-transform: uppercase;
-  letter-spacing: 0.48px;
-  position: relative;
-  font-size: 15px;
-  line-height: 20px;
-  cursor: pointer;
-
-  @media (min-width: 1024px) {
-    font-size: 16px;
-  }
-`
-
-const SiteHeaderMenu = styled.div`
-  flex: 1 1 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (min-width: 1024px) {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: -48px;
-    margin-left: -147px;
-  }
-
-  @media (min-width: 768px) {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: -40px;
-    margin-left: -137px;
-  }
-`
-
-const MenuContainer = styled.div``
-
-const MenuList = styled.ul`
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-`
-
-const MenuLi = styled.li`
-  opacity: 1;
-  visibility: inherit;
-  padding: 2px;
-`
-
-const Link = styled.a`
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 20px;
-  color: rgba(23, 23, 23, 0.4);
-  padding: 2px;
-  display: block;
-  cursor: pointer;
-
-  &:hover {
-    color: #171717;
-    font-weight: 500;
-  }
-
-  @media (min-width: 1024px) {
-    font-size: 16px;
-  }
-`
-
-const SiteHeaderIcon = styled.div`
-  opacity: 1;
-  visibility: inherit;
-  position: relative;
-  overflow: hidden;
 `
 
 const Main = styled.main`
@@ -443,27 +325,7 @@ const Bop = () => {
 
   return (
     <>
-      <SiteHeader>
-        <FullContainer>
-          <LinkLogo href='/portfolio'>Rex Odemheina</LinkLogo>
-          <SiteHeaderMenu>
-            <MenuContainer>
-              <MenuList>
-                <MenuLi>
-                  <Link href="#about">About</Link>
-                </MenuLi>
-                <MenuLi>
-                  <Link href="#projects">Projects</Link>
-                </MenuLi>
-                <MenuLi>
-                  <Link href="#contact">Contact</Link>
-                </MenuLi>
-              </MenuList>
-            </MenuContainer>
-          </SiteHeaderMenu>
-          <SiteHeaderIcon>.</SiteHeaderIcon>
-        </FullContainer>
-      </SiteHeader>
+      <Navbar />
       <Main>
         <CaseHero>
           <CaseHeroContent>
