@@ -194,6 +194,7 @@ const CaseHeroParagraph = styled.p`
   opacity: 1;
   visibility: inherit;
   margin-bottom: 2rem;
+  text-transform: uppercase;
 
   @media screen and (min-width: 1025px)
    {
@@ -323,7 +324,7 @@ const Paragraph = styled.p`
   }
 
   @media screen and (max-width: 768px) {
-    &:second-child {
+    &:last-child {
       width: 60%;
     }
   }
