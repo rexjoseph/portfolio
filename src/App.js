@@ -5,8 +5,8 @@ import Bop from "./pages/Bop";
 const App = () => {
   return (
     <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route path="/portfolio/work/bop" element={<Bop />} />
+      <Route exact path="/portfolio" element={<Home />} />
+      <Route path="/work/bop" element={<Bop />} />
       <Route path="*" element={<Home />} />
     </Routes>
   )
