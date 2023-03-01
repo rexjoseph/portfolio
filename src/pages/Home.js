@@ -533,7 +533,7 @@ const Home = () => {
             <BlogRow1>
               <Hr></Hr>
               <BlogList>
-                <BloglistLink href="/portfolio/work/bop">
+                <BloglistLink href="/portfolio/bop">
                   <BlogListP>
                     <BlogListSpan>bop.</BlogListSpan>
                     <BlogListSpan>Apparel eCommerce</BlogListSpan>
