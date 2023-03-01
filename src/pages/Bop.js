@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import styled from 'styled-components';
 
 const SiteHeader = styled.header`
@@ -429,16 +430,21 @@ const SocialLinkH2Link = styled.a`
 
 const Bop = () => {
   const copy = new Date().getFullYear();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     document.title = `Bop — Apparel`;
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <SiteHeader>
         <FullContainer>
-          <LinkLogo href='/'>Rex Odemheina</LinkLogo>
+          <LinkLogo href='/portfolio'>Rex Odemheina</LinkLogo>
           <SiteHeaderMenu>
             <MenuContainer>
               <MenuList>

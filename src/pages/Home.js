@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Bop from "../images/bop-min-scaled-1.jpg"
+import { Link } from 'react-router-dom'
 
 const SiteHeader = styled.header`
   padding: 12px 0;
@@ -126,7 +127,7 @@ const MenuLi = styled.li`
   padding: 2px;
 `
 
-const Link = styled.a`
+const LinkA = styled.a`
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
@@ -295,7 +296,7 @@ const Hr = styled.hr`
   transform: scaleX(1);
 `
 
-const BloglistLink = styled.a`
+const BloglistLink = styled.div`
   display: block;
   width: 100%;
   margin-bottom: 64px;
@@ -498,18 +499,18 @@ const Home = () => {
     <>
       <SiteHeader>
         <FullContainer>
-          <LinkLogo href='/'>Rex Odemheina</LinkLogo>
+          <LinkLogo href='/portfolio'>Rex Odemheina</LinkLogo>
           <SiteHeaderMenu>
             <MenuContainer>
               <MenuList>
                 <MenuLi>
-                  <Link href="#about">About</Link>
+                  <LinkA href="#about">About</LinkA>
                 </MenuLi>
                 <MenuLi>
-                  <Link href="#projects">Projects</Link>
+                  <LinkA href="#projects">Projects</LinkA>
                 </MenuLi>
                 <MenuLi>
-                  <Link href="#contact">Contact</Link>
+                  <LinkA href="#contact">Contact</LinkA>
                 </MenuLi>
               </MenuList>
             </MenuContainer>
@@ -533,21 +534,23 @@ const Home = () => {
             <BlogRow1>
               <Hr></Hr>
               <BlogList>
-                <BloglistLink href="/#/portfolio/bop">
-                  <BlogListP>
-                    <BlogListSpan>bop.</BlogListSpan>
-                    <BlogListSpan>Apparel eCommerce</BlogListSpan>
-                    <BlogListSpan>bop.</BlogListSpan>
-                  </BlogListP>
-                  <BlogListImageDiv>
-                    <BlogListImage src={Bop} alt="Bop" />
-                  </BlogListImageDiv>
-                  <BlogListP1>
-                    <BlogListSpan>bop.</BlogListSpan>
-                    <BlogListSpan>Apparel eCommerce</BlogListSpan>
-                    <BlogListSpan>bop.</BlogListSpan>
-                  </BlogListP1>
-                </BloglistLink>
+                <Link to="/portfolio/bop">
+                  <BloglistLink>
+                    <BlogListP>
+                      <BlogListSpan>bop.</BlogListSpan>
+                      <BlogListSpan>Apparel eCommerce</BlogListSpan>
+                      <BlogListSpan>bop.</BlogListSpan>
+                    </BlogListP>
+                    <BlogListImageDiv>
+                      <BlogListImage src={Bop} alt="Bop" />
+                    </BlogListImageDiv>
+                    <BlogListP1>
+                      <BlogListSpan>bop.</BlogListSpan>
+                      <BlogListSpan>Apparel eCommerce</BlogListSpan>
+                      <BlogListSpan>bop.</BlogListSpan>
+                    </BlogListP1>
+                  </BloglistLink>
+                </Link>
               </BlogList>
             </BlogRow1>
           </SectionGrid>
