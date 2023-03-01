@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.14a278db.css",
-    "main.js": "/portfolio/static/js/main.bbc115df.js",
+    "main.js": "/portfolio/static/js/main.4c11e577.js",
     "static/media/bop-min-scaled-1.jpg": "/portfolio/static/media/bop-min-scaled-1.6cc6151837f63c06cc70.jpg",
     "static/media/MarketSans-SemiBold.ttf": "/portfolio/static/media/MarketSans-SemiBold.0794807748ebdd38f827.ttf",
     "static/media/MarketSans-Bold.ttf": "/portfolio/static/media/MarketSans-Bold.ef1c7d32de477738289c.ttf",
@@ -9,12 +9,13 @@
     "static/media/MarketSans-Regular.ttf": "/portfolio/static/media/MarketSans-Regular.82f021775ec6982a9cb0.ttf",
     "static/media/MarketSans-Light.ttf": "/portfolio/static/media/MarketSans-Light.b95943d438a011f3ad2e.ttf",
     "static/media/MarketSans-Thin.ttf": "/portfolio/static/media/MarketSans-Thin.e589a2a9eebe5d9facee.ttf",
+    "static/media/pfp-rex.jpeg": "/portfolio/static/media/pfp-rex.df5f37c363c289b17e29.jpeg",
     "index.html": "/portfolio/index.html",
     "main.14a278db.css.map": "/portfolio/static/css/main.14a278db.css.map",
-    "main.bbc115df.js.map": "/portfolio/static/js/main.bbc115df.js.map"
+    "main.4c11e577.js.map": "/portfolio/static/js/main.4c11e577.js.map"
   },
   "entrypoints": [
     "static/css/main.14a278db.css",
-    "static/js/main.bbc115df.js"
+    "static/js/main.4c11e577.js"
   ]
 }
