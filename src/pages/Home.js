@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Bop from "../images/bop-min-scaled-1.jpg";
 import { Link } from "react-router-dom";
 import TextSpan from "../TextSpan";
+import Image from "../images/pfp-rex.jpeg"
 
 const sentence =
   "Hey! I am Rex, a Software Engineer with 2.5 years of experience creating experiences for startups, brands, charities, and agencies related to climate, fintech, eCommerce, and SaaS. I help businesses reach their goals by creating clean but catchy solutions that have a personality and deliver the best outcomes.".split(
@@ -157,7 +158,24 @@ const SiteHeaderIcon = styled.div`
   visibility: inherit;
   position: relative;
   overflow: hidden;
+  background-color: rgb(209 213 219/1);
+  border-color: rgb(255 255 255/1);
+  border-width: 2px;
+  border-radius: 9999px;
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1/1;
+
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
+
+const SiteHeaderIconImage = styled.img`
+  height: auto;
+  max-width: 100%;
+`
 
 const Main = styled.main`
   background: #f5f5f4;
@@ -522,7 +540,9 @@ const Home = () => {
               </MenuList>
             </MenuContainer>
           </SiteHeaderMenu>
-          <SiteHeaderIcon>.</SiteHeaderIcon>
+          <SiteHeaderIcon>
+            <SiteHeaderIconImage src={Image} />
+          </SiteHeaderIcon>
         </FullContainer>
       </SiteHeader>
       <Main>
